@@ -12,6 +12,7 @@ dist/
 # Generated review packages and screenshots
 revision-*.zip
 revision-*.png
+site-deploy.tar
 
 # System files
 .DS_Store
