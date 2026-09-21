@@ -1,0 +1,117 @@
+---
+import { images, links, navItems, site } from "@data/site";
+
+interface Props {
+  rootLinks?: boolean;
+}
+
+const { rootLinks = false } = Astro.props;
+const resolveHref = (href: string) => (rootLinks && href.startsWith("#") ? `/${href}` : href);
+---
+
+<header class="site-header">
+  <div class="header-shell">
+    <a class="brand-link" href={resolveHref("#inicio")} aria-label="Ir al inicio">
+      <img src={images.logo.src} alt="" width="68" height="68" />
+      <span>
+        <strong>{site.shortName}</strong>
+        <small>Sala Cuna y Jardín Infantil</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      {
+        navItems.map((item) =>
+          item.children ? (
+            <details class="nav-group" data-nav-group>
+              <summary>{item.label}</summary>
+              <div class="nav-dropdown">
+                {item.children.map((child) => (
+                  <a href={resolveHref(child.href)}>{child.label}</a>
+                ))}
+              </div>
+            </details>
+          ) : (
+            <a href={resolveHref(item.href)}>{item.label}</a>
+          ),
+        )
+      }
+    </nav>
+
+    <a class="button button-primary header-action" href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+      WhatsApp
+    </a>
+
+    <details class="mobile-menu">
+      <summary aria-label="Abrir menú de navegación">
+        <span class="menu-lines" aria-hidden="true"></span>
+        <span class="menu-label">Menú</span>
+      </summary>
+      <nav aria-label="Navegación móvil">
+        {
+          navItems.map((item) =>
+            item.children ? (
+              <div class="mobile-nav-group">
+                <p>{item.label}</p>
+                {item.children.map((child) => (
+                  <a href={resolveHref(child.href)}>{child.label}</a>
+                ))}
+              </div>
+            ) : (
+              <a href={resolveHref(item.href)}>{item.label}</a>
+            ),
+          )
+        }
+        <a class="button button-primary" href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  const mobileMenu = document.querySelector<HTMLDetailsElement>(".mobile-menu");
+  const navGroups = Array.from(document.querySelectorAll<HTMLDetailsElement>("[data-nav-group]"));
+
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.open = false;
+    });
+  });
+
+  navGroups.forEach((group) => {
+    group.addEventListener("toggle", () => {
+      if (!group.open) return;
+
+      navGroups.forEach((otherGroup) => {
+        if (otherGroup !== group) otherGroup.open = false;
+      });
+    });
+
+    group.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        group.open = false;
+      });
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+
+    navGroups.forEach((group) => {
+      if (!group.contains(target)) group.open = false;
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    if (mobileMenu?.open) mobileMenu.open = false;
+
+    navGroups.forEach((group) => {
+      group.open = false;
+    });
+  });
+</script>

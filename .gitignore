@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output and local caches
+dist/
+.astro/
+.asset-review/
+
+# Local logs
+*.log
+
+# Generated review packages and screenshots
+revision-*.zip
+revision-*.png
+
+# System files
+.DS_Store
+Thumbs.db

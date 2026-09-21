@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustracion del dia del nino y la nina</title>
+  <desc id="desc">Dibujo infantil con volantines, globos y dos ninos jugando.</desc>
+  <rect width="640" height="440" rx="32" fill="#fff6c8"/>
+  <path d="M122 132 188 78l66 54-66 54z" fill="#f03030" stroke="#273044" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M188 186c12 44-12 80-44 108" fill="none" stroke="#273044" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 12"/>
+  <circle cx="430" cy="104" r="34" fill="#2637df"/>
+  <circle cx="480" cy="126" r="28" fill="#6da13b"/>
+  <circle cx="386" cy="138" r="26" fill="#f29a31"/>
+  <path d="M430 138c-16 50-20 84-12 116" stroke="#5e6977" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="258" cy="270" r="34" fill="#f29a31"/>
+  <circle cx="384" cy="270" r="34" fill="#f29a31"/>
+  <path d="M206 360c18-58 84-58 104 0M334 360c18-58 84-58 104 0" fill="#fff" stroke="#273044" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M242 266c8 10 24 10 32 0M368 266c8 10 24 10 32 0" fill="none" stroke="#273044" stroke-width="7" stroke-linecap="round"/>
+</svg>

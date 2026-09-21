@@ -1,0 +1,24 @@
+---
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { links, site } from "@data/site";
+---
+
+<BaseLayout title={`Página no encontrada | ${site.shortName}`} description="Página no encontrada en el prototipo local de Semillita.">
+  <Header rootLinks />
+  <main id="contenido" class="not-found">
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">404</p>
+        <h1>Esta página no está disponible</h1>
+        <p>Volvamos al inicio del prototipo local de Semillita o conversemos directamente por WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/#inicio">Volver al inicio</a>
+          <a class="button button-outline" href={links.whatsapp} target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

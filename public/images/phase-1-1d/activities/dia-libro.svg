@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustracion de cuentos abiertos</title>
+  <desc id="desc">Dibujo infantil de un libro abierto con estrellas, hojas y un sol pequeno.</desc>
+  <rect width="640" height="440" rx="32" fill="#eef7e6"/>
+  <circle cx="520" cy="92" r="42" fill="#f6df3b"/>
+  <path d="M116 142c78-24 150-12 204 34 54-46 126-58 204-34v192c-78-24-150-12-204 34-54-46-126-58-204-34z" fill="#fff" stroke="#273044" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M320 176v192" stroke="#6da13b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M156 190c46-10 92-4 128 18M156 238c40-8 84-3 118 14M484 190c-46-10-92-4-128 18M484 238c-40-8-84-3-118 14" stroke="#5e6977" stroke-width="9" stroke-linecap="round"/>
+  <path d="m210 108 14 29 32 4-23 22 6 32-29-15-28 15 5-32-23-22 32-4z" fill="#f03030"/>
+  <path d="M420 302c30-54 88-42 88-42s-10 61-68 77" fill="#6da13b"/>
+  <path d="M428 330c18-30 46-48 80-70" stroke="#3e742c" stroke-width="8" stroke-linecap="round"/>
+</svg>

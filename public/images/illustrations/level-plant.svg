@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 210" role="img" aria-labelledby="title desc">
+  <title id="title">Planta</title>
+  <desc id="desc">Ilustracion original de una planta para Nivel Medio Menor.</desc>
+  <rect width="260" height="210" fill="#eef4ff" rx="26"/>
+  <path d="M45 172c48 13 126 13 170 0" fill="none" stroke="#6da13b" stroke-linecap="round" stroke-width="9"/>
+  <g fill="none" stroke="#273044" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+    <path d="M130 167V61"/>
+    <path d="M130 139c-35-25-72-13-94 22 38 6 68-2 94-22Z" fill="#6da13b"/>
+    <path d="M130 119c35-25 72-13 94 22-38 6-68-2-94-22Z" fill="#6da13b"/>
+    <path d="M130 91c-28-26-66-20-90 8 36 11 65 8 90-8Z" fill="#6da13b"/>
+    <path d="M130 75c28-26 66-20 90 8-36 11-65 8-90-8Z" fill="#6da13b"/>
+  </g>
+  <circle cx="130" cy="39" r="20" fill="#f6df3b" stroke="#273044" stroke-width="5"/>
+</svg>

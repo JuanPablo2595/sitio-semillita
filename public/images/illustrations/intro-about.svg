@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img" aria-labelledby="title desc">
+  <title id="title">Jardin con brotes</title>
+  <desc id="desc">Ilustracion original de un jardin infantil con brotes, flores y sol.</desc>
+  <rect width="360" height="260" fill="none"/>
+  <circle cx="286" cy="58" r="32" fill="#f6df3b"/>
+  <path d="M38 214c58-28 123-28 180 0s86 17 116-3" fill="none" stroke="#6da13b" stroke-linecap="round" stroke-width="10"/>
+  <g stroke="#273044" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+    <path d="M82 177c-21-16-20-39 0-63 20 24 21 47 0 63Z" fill="#f29a31"/>
+    <path d="M82 151c-17-17-40-17-57 0 20 12 38 12 57 0Z" fill="#6da13b"/>
+    <path d="M82 151c17-17 40-17 57 0-20 12-38 12-57 0Z" fill="#6da13b"/>
+    <path d="M82 176v32"/>
+    <path d="M196 180c-24-21-24-48 0-76 24 28 24 55 0 76Z" fill="#f03030"/>
+    <path d="M196 149c-22-18-49-14-66 8 23 9 45 6 66-8Z" fill="#6da13b"/>
+    <path d="M196 149c22-18 49-14 66 8-23 9-45 6-66-8Z" fill="#6da13b"/>
+    <path d="M196 179v30"/>
+  </g>
+  <g transform="translate(250 137)">
+    <circle cx="28" cy="34" r="16" fill="#f03030"/>
+    <circle cx="57" cy="34" r="16" fill="#2637df"/>
+    <circle cx="43" cy="12" r="16" fill="#f6df3b"/>
+    <circle cx="43" cy="34" r="11" fill="#ffffff"/>
+  </g>
+</svg>

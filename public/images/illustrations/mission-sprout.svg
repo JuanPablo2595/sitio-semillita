@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title desc">
+  <title id="title">Brote cuidado con amor</title>
+  <desc id="desc">Ilustracion original de manos sosteniendo un brote.</desc>
+  <rect width="420" height="320" fill="#f0f7e7" rx="34"/>
+  <circle cx="334" cy="72" r="34" fill="#f6df3b"/>
+  <g fill="none" stroke="#273044" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+    <path d="M146 226c34 25 94 25 128 0" />
+    <path d="M99 214c39-4 67 6 96 32" />
+    <path d="M321 214c-39-4-67 6-96 32" />
+    <path d="M210 212v-80" />
+    <path d="M210 159c-33-34-78-28-100 7 38 14 72 10 100-7Z" fill="#6da13b"/>
+    <path d="M210 147c33-34 78-28 100 7-38 14-72 10-100-7Z" fill="#6da13b"/>
+    <path d="M210 121c-26-29-25-66 0-95 25 29 26 66 0 95Z" fill="#f29a31"/>
+  </g>
+  <circle cx="92" cy="82" r="13" fill="#f03030"/>
+  <circle cx="118" cy="60" r="9" fill="#2637df"/>
+</svg>

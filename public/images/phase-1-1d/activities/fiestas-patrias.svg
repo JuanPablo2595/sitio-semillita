@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustracion de Fiestas Patrias</title>
+  <desc id="desc">Dibujo infantil con banderines chilenos, una ramada pequena y flores.</desc>
+  <rect width="640" height="440" rx="32" fill="#fff8e1"/>
+  <path d="M92 100h456" stroke="#273044" stroke-width="8" stroke-linecap="round"/>
+  <g>
+    <path d="M116 102v70l44-22 44 22v-70z" fill="#fff" stroke="#273044" stroke-width="6"/>
+    <path d="M116 102h44v35h-44z" fill="#2637df"/>
+    <path d="M160 137h44v35h-88v-35z" fill="#f03030"/>
+    <circle cx="138" cy="120" r="7" fill="#fff"/>
+  </g>
+  <g transform="translate(220)">
+    <path d="M116 102v70l44-22 44 22v-70z" fill="#fff" stroke="#273044" stroke-width="6"/>
+    <path d="M116 102h44v35h-44z" fill="#2637df"/>
+    <path d="M160 137h44v35h-88v-35z" fill="#f03030"/>
+    <circle cx="138" cy="120" r="7" fill="#fff"/>
+  </g>
+  <path d="M168 314h304v68H168z" fill="#fff" stroke="#6da13b" stroke-width="10"/>
+  <path d="M144 314h352l-52-86H196z" fill="#f29a31" stroke="#273044" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M236 382v-64h64v64M340 318h76v40h-76z" fill="#d9edb9" stroke="#273044" stroke-width="8"/>
+  <path d="M102 356c28-34 64-34 92 0M446 356c28-34 64-34 92 0" fill="none" stroke="#f03030" stroke-width="14" stroke-linecap="round"/>
+</svg>

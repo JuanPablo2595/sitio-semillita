@@ -1,0 +1,406 @@
+---
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Hero from "@components/Hero.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import {
+  activities,
+  activitiesIntro,
+  certificationImages,
+  contact,
+  contentBlocks,
+  facilitiesIntro,
+  families,
+  images,
+  levels,
+  levelsIntro,
+  links,
+  presentation,
+  principles,
+  schedules,
+  schedulesIntro,
+  site,
+} from "@data/site";
+---
+
+<BaseLayout title={`${site.name} | Prototipo local`} description={site.description}>
+  <Header />
+  <main id="contenido">
+    <Hero />
+
+    <section id="nosotros" class="section intro-section" aria-labelledby="nosotros-title">
+      <div class="container illustrated-title">
+        <div>
+          <h2 id="nosotros-title">Sobre nosotros</h2>
+        </div>
+        <img
+          class="intro-illustration"
+          src={images.illustrations.about.src}
+          alt={images.illustrations.about.alt}
+          width="360"
+          height="260"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="container about-copy">
+        <p>{presentation.text}</p>
+        <p>{presentation.certifications} RBD N.° <span>{site.rbd}</span>.</p>
+        <p>{site.foundedDetail}</p>
+      </div>
+    </section>
+
+    <section id="certificaciones" class="section certifications-section" aria-labelledby="certificaciones-title">
+      <div class="container">
+        <div class="section-title-center">
+          <h2 id="certificaciones-title">Certificaciones</h2>
+          <p>Contamos con Autorización de Funcionamiento y Reconocimiento Oficial.</p>
+          <p class="rbd-line">RBD N.° <span>{site.rbd}</span></p>
+        </div>
+        <div class="certificate-gallery" aria-label="Certificaciones oficiales">
+          {
+            certificationImages.map((certificate) => (
+              <figure class="certificate-card">
+                <a href={certificate.fullSrc} target="_blank" rel="noopener noreferrer" aria-label={`Abrir imagen completa: ${certificate.title}`}>
+                  <ResponsiveImage
+                    image={certificate.image}
+                    sizes="(max-width: 640px) 42vw, 260px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption>{certificate.title}</figcaption>
+              </figure>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {
+      contentBlocks.map((block) => (
+        <section id={block.id} class:list={["section", "feature-band", block.theme === "pastel" ? "section-pastel" : "section-white"]} aria-labelledby={`${block.id}-title`}>
+          <div class:list={["container", "feature-row", block.reverse && "is-reversed"]}>
+            <figure class:list={["feature-media", block.mediaType === "illustration" ? "feature-illustration" : "feature-photo"]}>
+              {
+                block.mediaType === "photo" ? (
+                  <ResponsiveImage
+                    image={block.media as any}
+                    sizes="(max-width: 859px) calc(100vw - 32px), 48vw"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <img src={block.media.src} alt={block.media.alt} width="620" height="460" loading="lazy" decoding="async" />
+                )
+              }
+            </figure>
+            <div class="feature-copy">
+              <h2 id={`${block.id}-title`}>{block.title}</h2>
+              <p class="feature-subtitle">{block.subtitle}</p>
+              <p>{block.text}</p>
+            </div>
+          </div>
+        </section>
+      ))
+    }
+
+    <section id="niveles" class="section levels-section" aria-labelledby="niveles-title">
+      <div class="container">
+        <div class="section-title-center">
+          <h2 id="niveles-title">Niveles</h2>
+          <p>{levelsIntro.quote}</p>
+        </div>
+
+        <div class="level-carousel" data-level-carousel>
+          <button class="carousel-button carousel-prev" type="button" aria-label="Ver nivel anterior" data-carousel-direction="-1">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="levels-track" tabindex="0" aria-label="Carrusel de niveles oficiales">
+            {
+              levels.map((level) => (
+                <article id={level.id} class="level-card">
+                  <img src={level.image.src} alt={level.image.alt} width="260" height="210" loading="lazy" decoding="async" />
+                  <div>
+                    <h3>{level.title}</h3>
+                    <p>{level.age}</p>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+          <button class="carousel-button carousel-next" type="button" aria-label="Ver nivel siguiente" data-carousel-direction="1">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="jornadas" class="section schedules-section" aria-labelledby="jornadas-title">
+      <div class="container schedules-layout">
+        <div class="schedules-copy">
+          <h2 id="jornadas-title">Jornadas</h2>
+          <p>{schedulesIntro}</p>
+        </div>
+        <div class="schedule-panel" aria-label="Jornadas y horarios oficiales">
+          <table>
+            <caption class="sr-only">Jornadas y horarios oficiales de atención</caption>
+            <thead>
+              <tr class="schedule-panel-header">
+                <th scope="col">Jornada</th>
+                <th scope="col">Horario</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                schedules.map((schedule) => (
+                  <tr class="schedule-row">
+                    <th scope="row">{schedule.title}</th>
+                    <td>{schedule.time}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="familias" class="section feature-band section-white" aria-labelledby="familias-title">
+      <div class="container feature-row family-row">
+        <figure class="feature-media feature-photo">
+          <ResponsiveImage
+            image={images.content.families}
+            sizes="(max-width: 859px) calc(100vw - 32px), 48vw"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="feature-copy">
+          <h2 id="familias-title">Nuestras familias</h2>
+          <p class="feature-subtitle">{families.quote}</p>
+          <p>{families.text}</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="principios" class="section principles-section" aria-labelledby="principios-title">
+      <div class="container">
+        <div class="section-title-center">
+          <h2 id="principios-title">Principios educativos</h2>
+          <p>{principles.quote}</p>
+        </div>
+        <div class="principles-cloud" aria-label="Principios educativos de Semillita">
+          {
+            principles.words.map((principle) => (
+              <span class:list={["principle-word", `word-${principle.size}`, `accent-${principle.accent}`]}>
+                {principle.title}
+              </span>
+            ))
+          }
+        </div>
+        <p class="principles-closing">{principles.text}</p>
+      </div>
+    </section>
+
+    <section id="jardin" class="section garden-section" aria-labelledby="jardin-title">
+      <div class="container illustrated-title">
+        <div>
+          <h2 id="jardin-title">{facilitiesIntro.title}</h2>
+        </div>
+        <img
+          class="intro-illustration"
+          src={images.illustrations.garden.src}
+          alt={images.illustrations.garden.alt}
+          width="420"
+          height="300"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="container garden-content">
+        <div class="garden-identity">
+          <div>
+            <h3>Sede Ñuñoa</h3>
+            <p>{facilitiesIntro.text}</p>
+          </div>
+          <address>
+            <span>{contact.address}</span>
+            <a href={links.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp {contact.phoneDisplay}</a>
+            <a href={links.phone}>Llamar {contact.phoneDisplay}</a>
+          </address>
+        </div>
+
+        <div class="facility-gallery" aria-label="Galería fotográfica de Semillita">
+          {
+            images.facilities.map((group) => (
+              <article
+                class:list={["facility-carousel", group.featured && "facility-carousel-featured"]}
+                data-facility-carousel
+                aria-label={group.label}
+              >
+                <div class="facility-carousel-track">
+                  {
+                    group.images.map((image, index) => (
+                      <figure class:list={["facility-slide", index === 0 && "is-active"]} data-facility-slide={index}>
+                        <ResponsiveImage
+                          image={image}
+                          sizes={group.featured ? "(max-width: 1179px) calc(100vw - 24px), 1120px" : "(max-width: 639px) calc(100vw - 24px), (max-width: 1179px) 45vw, 560px"}
+                          loading={index === 0 ? "lazy" : "lazy"}
+                          decoding="async"
+                        />
+                      </figure>
+                    ))
+                  }
+                </div>
+                {
+                  group.images.length > 1 && (
+                    <div class="facility-carousel-controls" aria-label={`Cambiar foto de ${group.label}`}>
+                      <button class="facility-carousel-button" type="button" aria-label={`Foto anterior de ${group.label}`} data-facility-direction="-1">
+                        <span aria-hidden="true">‹</span>
+                      </button>
+                      <button class="facility-carousel-button" type="button" aria-label={`Foto siguiente de ${group.label}`} data-facility-direction="1">
+                        <span aria-hidden="true">›</span>
+                      </button>
+                    </div>
+                  )
+                }
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="actividades" class="section activities-section" aria-labelledby="actividades-title">
+      <div class="container illustrated-title">
+        <div>
+          <h2 id="actividades-title">Actividades</h2>
+          <p>{activitiesIntro}</p>
+        </div>
+        <img
+          class="intro-illustration"
+          src={images.illustrations.activities.src}
+          alt={images.illustrations.activities.alt}
+          width="380"
+          height="270"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="container activities-accordion" aria-label="Listado de actividades oficiales">
+        {
+          activities.map((activity) => (
+            <details class="activity-item">
+              <summary>{activity.title}</summary>
+              <div class="activity-content">
+                <p>{activity.text}</p>
+                <figure class="activity-media">
+                  <ResponsiveImage
+                    image={activity.image}
+                    sizes="(max-width: 639px) calc(100vw - 72px), 440px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact-section" aria-labelledby="contacto-title">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <h2 id="contacto-title">Contáctanos</h2>
+          <address>
+            <div>
+              <strong>Dirección</strong>
+              <span>{contact.address}</span>
+            </div>
+            <div>
+              <strong>Horario general</strong>
+              <span>Lunes a viernes, de enero a diciembre, excepto fines de semana y días feriados.</span>
+            </div>
+            <div>
+              <strong>Teléfono y WhatsApp</strong>
+              <a href={links.phone}>{contact.phoneDisplay}</a>
+            </div>
+            <div>
+              <strong>Correo</strong>
+              <a href={links.email}>{contact.publicEmail}</a>
+            </div>
+            <div>
+              <strong>Instagram</strong>
+              <a href={links.instagram} target="_blank" rel="noopener noreferrer">Instagram oficial</a>
+            </div>
+          </address>
+        </div>
+
+        <div class="contact-card">
+          <h3>Canales directos</h3>
+          <p>Precios, matrícula y cupos se consultan por WhatsApp.</p>
+          <div class="contact-actions" aria-label="Acciones de contacto">
+            <a class="button button-primary" href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+              Contáctanos por WhatsApp
+            </a>
+            <a class="button button-outline" href={links.phone}>Llamar ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a class="back-to-top" href="#inicio" aria-label="Volver al inicio">
+      <span aria-hidden="true">↑</span>
+    </a>
+  </main>
+  <Footer />
+  <script>
+    document.querySelectorAll("[data-level-carousel]").forEach((carousel) => {
+      const track = carousel.querySelector(".levels-track");
+      const buttons = carousel.querySelectorAll("[data-carousel-direction]");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      if (!track) return;
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const direction = Number(button.getAttribute("data-carousel-direction"));
+          const card = track.querySelector(".level-card");
+          const styles = window.getComputedStyle(track);
+          const gap = Number.parseFloat(styles.columnGap || styles.gap || "0");
+          const step = card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+
+          track.scrollBy({
+            left: direction * step,
+            behavior: reducedMotion.matches ? "auto" : "smooth",
+          });
+        });
+      });
+    });
+  </script>
+  <script>
+    document.querySelectorAll("[data-facility-carousel]").forEach((carousel) => {
+      const slides = Array.from(carousel.querySelectorAll("[data-facility-slide]"));
+      const buttons = carousel.querySelectorAll("[data-facility-direction]");
+      let activeIndex = 0;
+
+      const showSlide = (nextIndex: number) => {
+        activeIndex = (nextIndex + slides.length) % slides.length;
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("is-active", index === activeIndex);
+        });
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          showSlide(activeIndex + Number(button.getAttribute("data-facility-direction")));
+        });
+      });
+    });
+  </script>
+</BaseLayout>

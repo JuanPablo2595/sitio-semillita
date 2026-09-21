@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title desc">
+  <title id="title">Equipo educativo representado por flores</title>
+  <desc id="desc">Ilustracion original de flores diferentes creciendo juntas.</desc>
+  <rect width="420" height="320" fill="#eef4ff" rx="34"/>
+  <path d="M53 250c88-30 167-29 314 0" fill="none" stroke="#6da13b" stroke-linecap="round" stroke-width="11"/>
+  <g stroke="#273044" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+    <path d="M121 231v-76"/>
+    <circle cx="101" cy="142" r="18" fill="#f03030"/>
+    <circle cx="141" cy="142" r="18" fill="#2637df"/>
+    <circle cx="121" cy="116" r="18" fill="#f6df3b"/>
+    <circle cx="121" cy="146" r="12" fill="#ffffff"/>
+    <path d="M211 239v-102"/>
+    <circle cx="187" cy="125" r="20" fill="#f03030"/>
+    <circle cx="235" cy="125" r="20" fill="#6da13b"/>
+    <circle cx="211" cy="95" r="20" fill="#f6df3b"/>
+    <circle cx="211" cy="128" r="13" fill="#ffffff"/>
+    <path d="M301 231v-74"/>
+    <circle cx="282" cy="148" r="17" fill="#2637df"/>
+    <circle cx="320" cy="148" r="17" fill="#f29a31"/>
+    <circle cx="301" cy="124" r="17" fill="#f6df3b"/>
+    <circle cx="301" cy="150" r="11" fill="#ffffff"/>
+  </g>
+</svg>

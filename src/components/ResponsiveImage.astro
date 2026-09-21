@@ -1,0 +1,62 @@
+---
+interface Source {
+  media?: string;
+  sizes?: string;
+  srcset: string;
+  type?: string;
+}
+
+interface ResponsiveAsset {
+  alt: string;
+  height: number;
+  src: string;
+  srcset?: string;
+  sources?: Source[];
+  width: number;
+}
+
+interface Props {
+  decoding?: "async" | "auto" | "sync";
+  fetchpriority?: "auto" | "high" | "low";
+  image: ResponsiveAsset;
+  imageClass?: string;
+  loading?: "eager" | "lazy";
+  pictureClass?: string;
+  sizes?: string;
+}
+
+const {
+  decoding = "async",
+  fetchpriority,
+  image,
+  imageClass,
+  loading = "lazy",
+  pictureClass,
+  sizes = "100vw",
+} = Astro.props;
+---
+
+<picture class={pictureClass}>
+  {
+    image.sources?.map((source) => (
+      <source
+        media={source.media}
+        sizes={source.sizes ?? sizes}
+        srcset={source.srcset}
+        type={source.type}
+      />
+    ))
+  }
+  <img
+    class={imageClass}
+    src={image.src}
+    srcset={image.srcset}
+    sizes={image.srcset ? sizes : undefined}
+    alt={image.alt}
+    width={image.width}
+    height={image.height}
+    loading={loading}
+    decoding={decoding}
+    fetchpriority={fetchpriority}
+  />
+</picture>

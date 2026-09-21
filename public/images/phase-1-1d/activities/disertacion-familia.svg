@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustracion de una familia compartiendo una presentacion</title>
+  <desc id="desc">Dibujo infantil con una casa, corazones y tres personas frente a un pequeno cartel.</desc>
+  <rect width="640" height="440" rx="32" fill="#fff8e1"/>
+  <circle cx="92" cy="86" r="34" fill="#f6df3b"/>
+  <path d="M128 298c54-94 124-142 210-142s157 48 210 142" fill="none" stroke="#d9edb9" stroke-width="42" stroke-linecap="round"/>
+  <path d="M192 220 320 126l128 94v112H192z" fill="#ffffff" stroke="#6da13b" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M174 224 320 112l146 112" fill="none" stroke="#f03030" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="288" y="260" width="64" height="72" rx="12" fill="#f6df3b" stroke="#273044" stroke-width="8"/>
+  <circle cx="240" cy="276" r="26" fill="#f29a31"/>
+  <circle cx="320" cy="250" r="30" fill="#2637df"/>
+  <circle cx="400" cy="276" r="26" fill="#f03030"/>
+  <path d="M202 354c12-36 64-36 76 0M276 354c16-44 72-44 88 0M362 354c12-36 64-36 76 0" fill="none" stroke="#273044" stroke-width="12" stroke-linecap="round"/>
+  <path d="M510 120c20-28 60 1 30 33l-30 28-30-28c-30-32 10-61 30-33z" fill="#f03030" opacity=".9"/>
+</svg>

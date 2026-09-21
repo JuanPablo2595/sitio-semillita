@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">Casita hongo de Semillita</title>
+  <desc id="desc">Ilustracion original de una casita hongo con flores y hojas.</desc>
+  <rect width="420" height="300" fill="none"/>
+  <path d="M67 241c82-30 215-28 292 0" fill="none" stroke="#6da13b" stroke-linecap="round" stroke-width="12"/>
+  <g stroke="#273044" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+    <path d="M131 236V130h150v106" fill="#fffdf7"/>
+    <path d="M101 144c18-70 78-108 115-108 53 0 101 43 111 108H101Z" fill="#f03030"/>
+    <circle cx="164" cy="95" r="18" fill="#fffdf7"/>
+    <circle cx="228" cy="71" r="14" fill="#fffdf7"/>
+    <circle cx="277" cy="111" r="16" fill="#fffdf7"/>
+    <path d="M181 236v-60c0-19 16-34 35-34s35 15 35 34v60" fill="#f6df3b"/>
+    <path d="M155 160h34v31h-34z" fill="#eef4ff"/>
+    <path d="M253 160h34v31h-34z" fill="#eef4ff"/>
+  </g>
+  <g fill="#f29a31" stroke="#273044" stroke-width="4">
+    <circle cx="72" cy="213" r="12"/><circle cx="96" cy="208" r="12"/><circle cx="84" cy="190" r="12"/>
+  </g>
+  <circle cx="84" cy="209" r="7" fill="#ffffff"/>
+</svg>

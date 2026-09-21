@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" role="img" aria-labelledby="title desc">
+  <title id="title">Semilla y flor de Semillita</title>
+  <desc id="desc">Ilustracion original de una semilla con hojas y una flor infantil.</desc>
+  <rect width="260" height="220" fill="none"/>
+  <circle cx="198" cy="47" r="24" fill="#f6df3b"/>
+  <g fill="none" stroke="#273044" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+    <path d="M132 156c-27-23-27-52 0-82 27 30 27 59 0 82Z" fill="#f29a31"/>
+    <path d="M132 129c-20-24-56-24-76 0 25 17 55 17 76 0Z" fill="#6da13b"/>
+    <path d="M132 129c20-24 56-24 76 0-25 17-55 17-76 0Z" fill="#6da13b"/>
+    <path d="M132 158v31"/>
+  </g>
+  <g transform="translate(42 38)">
+    <circle cx="29" cy="34" r="16" fill="#f03030"/>
+    <circle cx="54" cy="31" r="16" fill="#2637df"/>
+    <circle cx="42" cy="11" r="16" fill="#f6df3b"/>
+    <circle cx="42" cy="34" r="10" fill="#ffffff"/>
+  </g>
+  <path d="M54 190c35 12 113 15 160 0" fill="none" stroke="#6da13b" stroke-linecap="round" stroke-width="7"/>
+</svg>

@@ -1,0 +1,37 @@
+---
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import { images, links, site } from "@data/site";
+---
+
+<section id="inicio" class="hero-section" aria-labelledby="hero-title">
+  <ResponsiveImage
+    image={images.hero}
+    pictureClass="hero-picture"
+    imageClass="hero-background"
+    sizes="100vw"
+    loading="eager"
+    decoding="sync"
+    fetchpriority="high"
+  />
+  <div class="hero-shade" aria-hidden="true"></div>
+
+  <div class="hero-shell hero-layout">
+    <h1 id="hero-title">
+      <span>Bienvenidos a</span>
+      <span>Sala Cuna y Jardín Infantil</span>
+      <span>Semillita</span>
+    </h1>
+
+    <aside class="hero-quote-card" aria-label="Frase oficial de Semillita">
+      <img src={images.illustrations.heroSeed.src} alt="" width="108" height="92" aria-hidden="true" />
+      <p>{site.tagline}</p>
+    </aside>
+
+    <div class="hero-actions" aria-label="Acciones principales">
+      <a class="button button-primary" href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+      <a class="button button-secondary" href={links.phone}>Llamar</a>
+    </div>
+  </div>
+</section>

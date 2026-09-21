@@ -1,0 +1,36 @@
+---
+import { contact, images, links, site } from "@data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-column footer-location">
+      <div class="footer-brand">
+        <img src={images.logo.src} alt="" width="70" height="70" loading="lazy" decoding="async" />
+        <strong>{site.name}</strong>
+      </div>
+      <address>
+        <span>{contact.address}</span>
+        <a href={links.instagram} target="_blank" rel="noopener noreferrer">Instagram oficial</a>
+      </address>
+    </div>
+
+    <div class="footer-column footer-contact">
+      <strong>Horario y contacto</strong>
+      <p>Lunes a viernes, de enero a diciembre, excepto fines de semana y días feriados.</p>
+      <a class="footer-jornadas-link" href="/#jornadas">Ver todas las jornadas</a>
+      <address>
+        <a href={links.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp {contact.phoneDisplay}</a>
+        <a href={links.phone}>Llamar {contact.phoneDisplay}</a>
+        <a href={links.email}>{contact.publicEmail}</a>
+      </address>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© {year} {site.shortName}</span>
+    <span>Prototipo local privado.</span>
+  </div>
+</footer>

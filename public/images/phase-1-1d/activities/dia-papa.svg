@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustracion para celebrar a papa</title>
+  <desc id="desc">Dibujo infantil de dos manos, una corbata y corazones de colores.</desc>
+  <rect width="640" height="440" rx="32" fill="#eef4ff"/>
+  <path d="M318 84 246 156l72 204 72-204z" fill="#2637df" opacity=".95"/>
+  <path d="M318 84 284 122l34 34 34-34z" fill="#f6df3b" stroke="#273044" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M246 156h144" stroke="#273044" stroke-width="10" stroke-linecap="round"/>
+  <path d="M180 302c42-50 98-46 138 4M460 302c-42-50-98-46-138 4" fill="none" stroke="#6da13b" stroke-width="22" stroke-linecap="round"/>
+  <path d="M158 172c18-26 56 0 28 30l-28 26-28-26c-28-30 10-56 28-30zM482 172c18-26 56 0 28 30l-28 26-28-26c-28-30 10-56 28-30z" fill="#f03030"/>
+  <circle cx="118" cy="92" r="34" fill="#f6df3b"/>
+</svg>

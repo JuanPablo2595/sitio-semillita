@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 210" role="img" aria-labelledby="title desc">
+  <title id="title">Brote</title>
+  <desc id="desc">Ilustracion original de un brote para Sala Cuna Mayor.</desc>
+  <rect width="260" height="210" fill="#f0f7e7" rx="26"/>
+  <path d="M54 171c42 14 115 14 153 0" fill="none" stroke="#6da13b" stroke-linecap="round" stroke-width="9"/>
+  <g fill="none" stroke="#273044" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+    <path d="M131 166V91"/>
+    <path d="M131 112c-30-31-68-24-88 8 36 13 64 9 88-8Z" fill="#6da13b"/>
+    <path d="M131 101c30-31 68-24 88 8-36 13-64 9-88-8Z" fill="#6da13b"/>
+    <path d="M131 82c-22-26-21-55 0-80 21 25 22 54 0 80Z" fill="#f29a31"/>
+  </g>
+</svg>
